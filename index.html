@@ -64,6 +64,18 @@
             100% { transform: translateY(-100vh) translateX(20px); opacity: 0; }
         }
 
+        .cover-avatar {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid rgba(255, 183, 77, 0.6);
+            box-shadow: 0 0 30px rgba(255, 183, 77, 0.2);
+            opacity: 0;
+            animation: fadeInUp 1.5s ease forwards 0.3s;
+            margin-bottom: 1.2rem;
+        }
+
         .cover-title {
             font-family: 'Ma Shan Zheng', cursive;
             font-size: 2.2rem;
@@ -328,6 +340,11 @@
 
         /* Desktop enhancements */
         @media (min-width: 769px) {
+            .cover-avatar {
+                width: 180px;
+                height: 180px;
+            }
+
             .cover-title {
                 font-size: 3rem;
             }
@@ -361,6 +378,7 @@
     <!-- Cover -->
     <section class="section-cover">
         <div class="cover-particles" id="particles"></div>
+        <img class="cover-avatar" src="aaron.jpg" alt="Aaron">
         <div class="cover-subtitle">致我们并肩同行的日子</div>
         <div class="cover-name">Aaron</div>
         <div class="cover-title">一路有你，未来可期</div>
@@ -394,7 +412,7 @@
 
     <script>
         // Photo order: by filename number (2-37)
-        const photoOrder = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37];
+        const photoOrder = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37];
 
         // Messages data
         const messages = [
